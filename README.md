@@ -384,19 +384,6 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ---
 
-
-### 📝 Community & Learning Resources
-
-- 🐚 **Shell Scripting Importance (My LinkedIn Post):** [Why Shell Scripting is Crucial for DevOps Engineers](https://www.linkedin.com/posts/activity-7423926892719751168-TkqQ)
-
----
-
-### 📝 Git Repository and Resources
-
-- 🐚 **Shell Scripting, Shell-Roboshop, common, Crontab :** [My Own Shell Scripting Own Repository](https://github.com/devopswihnaveen/shell-scripting)
-
----
-
 ## 🛠️ Tools & Technologies Covered
 
 * Linux
@@ -420,15 +407,6 @@ By the end of this program, you will:
 * Automate infrastructure using scripts
 * Work confidently with AWS services
 * Be interview-ready for DevOps / Cloud roles
-
----
-
-## 🤝 Mentorship & Interview Prep
-
-* Resume review
-* Mock interviews
-* Real-world scenario discussions
-* Career roadmap guidance
 
 ---
 
