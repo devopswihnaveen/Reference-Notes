@@ -334,15 +334,15 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 [Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4636845?)
 
 * 00:00:00 – Introduction & Recap
-* 00:09:22 – Installing "netaddr" for IP validity Verification
-* 00:11:25 – Ansible Error Handling (ignore_errors: true) -- (.rc is Return Code (or Exit Code))
-* 00:22:00 - Multiple plays in a single playbook file
-* 00:23:50 - RoboShop Ansible Project Started (EC2 and R53 creation using ansible)
-* 00:56:00 - Inventory file Creation for RoboShop Project
-* 01:00:00 - Mongodb.yaml with including mongodb.repo
-* 01:09:20 - Catalogue.yaml
-* 01:23:30 - Delete EC2 and Route53 Resources code to roboshop.yaml file
-* 01:30:00 - Session queries started
+* 00:04:59 - ansible creating ec2 and r53
+* 00:16:50 - catalogue using ansible
+* 01:00:50 - redis using ansible
+* 01:04:50 - lineinfile module
+* 01:10:30 - user using ansible
+* 01:13:00 - cart using ansible
+* 01:16:00 - user issues troubleshooting
+* 01:26:00 - deamon-reload (systemd_service)
+* 01:29:00 - aws EC2, Route53 resources destroy
 
 
 * 📄 **Session Notes:** [Session 24 Detailed Notes](session-24.txt) from another script
