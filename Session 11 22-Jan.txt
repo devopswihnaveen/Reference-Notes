@@ -1,0 +1,176 @@
+
+amaravathi.today	44.222.168.217
+
+172.31.10.49 cart.amaravathi.today
+172.31.43.203 catalogue.amaravathi.today
+172.31.1.218 dispatch.amaravathi.today
+172.31.43.88 mongo.amaravathi.today
+172.31.10.113 mysql.amaravathi.today
+172.31.14.149 payment.amaravathi.today
+172.31.3.206 rabbitmq.amaravathi.today
+172.31.77.76 redis.amaravathi.today
+172.31.15.14 shipping.amaravathi.today
+172.31.79.143 user.amaravathi.today
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026/01/22 17:01:35 [notice] 5882#5882: exiting
+2026/01/22 17:01:35 [notice] 5882#5882: exit
+2026/01/22 17:01:35 [notice] 5880#5880: signal 17 (SIGCHLD) received from 5882
+2026/01/22 17:01:35 [notice] 5880#5880: worker process 5882 exited with code 0
+2026/01/22 17:01:35 [notice] 5880#5880: signal 29 (SIGIO) received
+2026/01/22 17:01:35 [notice] 5880#5880: signal 17 (SIGCHLD) received from 5881
+2026/01/22 17:01:35 [notice] 5880#5880: worker process 5881 exited with code 0
+2026/01/22 17:01:35 [notice] 5880#5880: exit
+2026/01/22 17:01:53 [emerg] 1227#1227: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:36:52 [emerg] 15714#15714: host not found in upstream "shipping.amaravathi.today" in /etc/nginx/nginx.conf:53
+2026/01/22 17:37:49 [emerg] 16070#16070: host not found in upstream "shipping.amaravathi.today" in /etc/nginx/nginx.conf:53
+2026/01/22 17:38:58 [emerg] 16488#16488: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:39:35 [emerg] 16712#16712: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:39:37 [emerg] 16728#16728: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:39:38 [emerg] 16744#16744: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:39:43 [emerg] 16772#16772: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:41:30 [emerg] 17417#17417: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:41:34 [emerg] 17445#17445: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:42:09 [emerg] 17667#17667: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:43:19 [emerg] 18113#18113: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+2026/01/22 17:43:26 [emerg] 18171#18171: host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+^C
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]#
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]#
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# nginx -t
+nginx: [emerg] host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:50
+nginx: configuration file /etc/nginx/nginx.conf test failed
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# vim /etc/nginx/nginx.conf
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# nginx -t
+nginx: [emerg] host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:52
+nginx: configuration file /etc/nginx/nginx.conf test failed
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# dig catalogue.amaravathi.today
+
+; <<>> DiG 9.16.23-RH <<>> catalogue.amaravathi.today
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 12844
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;catalogue.amaravathi.today.    IN      A
+
+;; AUTHORITY SECTION:
+amaravathi.today.       3162    IN      SOA     ns1.name.com. hostmaster.nsone.net. 1747597467 43200 7200 1209600 3600
+
+;; Query time: 0 msec
+;; SERVER: 172.31.0.2#53(172.31.0.2)
+;; WHEN: Thu Jan 22 17:47:20 UTC 2026
+;; MSG SIZE  rcvd: 139
+
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# nslookup catalogue.amaravathi.today
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+** server can't find catalogue.amaravathi.today: NXDOMAIN
+
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# ^C
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# dig catalogue.amaravathi.today
+
+; <<>> DiG 9.16.23-RH <<>> catalogue.amaravathi.today
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 7108
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;catalogue.amaravathi.today.    IN      A
+
+;; AUTHORITY SECTION:
+amaravathi.today.       553     IN      SOA     ns1.name.com. hostmaster.nsone.net. 1747597467 43200 7200 1209600 3600
+
+;; Query time: 1 msec
+;; SERVER: 172.31.0.2#53(172.31.0.2)
+;; WHEN: Thu Jan 22 17:52:41 UTC 2026
+;; MSG SIZE  rcvd: 123
+
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# nslookup catalogue.amaravathi.today
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+** server can't find catalogue.amaravathi.today: NXDOMAIN
+
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# nslookup catalogue.amaravathi.today
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+** server can't find catalogue.amaravathi.today: NXDOMAIN
+
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# nslookup cart.amaravathi.today
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+** server can't find cart.amaravathi.today: NXDOMAIN
+
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+[ root@frontend ~ ]# nslookup shipping.amaravathi.today
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+** server can't find shipping.amaravathi.today: NXDOMAIN
+
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null
+
+
+[ root@frontend ~ ]# nginx -t
+nginx: [emerg] host not found in upstream "catalogue.amaravathi.today" in /etc/nginx/nginx.conf:52
+nginx: configuration file /etc/nginx/nginx.conf test failed
+
+44.222.168.217 | 172.31.78.173 | t3.micro | null

@@ -1,0 +1,91 @@
+Lanched 3 servers for 3-tier orchesture project
+1. Frontend
+2. Bakend
+3. Database
+
+For frontend, https://github.com/daws-88s/expense-documentation/blob/main/frontend.MD
+
+For Backend, https://github.com/daws-88s/expense-documentation/blob/main/backend.MD
+
+For Database, https://github.com/daws-88s/expense-documentation/blob/main/mysql.MD
+
+
+Root Servers:
+13 root servers across the world managed by different organisations and governments to control TLD's and part of ICANN, DNS resolutions requeests from ISP comes to
+root servers
+
+Registars;
+Who sells the domains, basically mediators b/w TLD and end users. Who can managee domains too
+
+NS: who is currently managing the domains, we can buy domain with one registar and we can transfer the management to another registar 
+
+
+Route53:
+Create AWS Route53 hostedzone and configure our name servers 
+A: Mapping the IP to domain
+
+netstat -lntp
+curl http:localhost:8080/health
+
+telnet IP Port
+
+HTTP Status code:
+------------------
+http://amaravathi.today/ai/transactions
+
+100 -> Informational
+continuing or switching protocols from HTTPS to HTTP
+
+2XXX - -> Success
+	200 - Ok
+	201 - created
+	204 - Deleted
+
+3XXX --> Redirectional
+	301 - url redirection perm
+	302 - temp redirection
+	304 - Browser cache
+
+4XXX - Client side error
+	404 - Not found
+	400 - Bad request, Invalid Json
+	401 - Unauthorize, No authentication
+	403 - Forbidden, No peermission to this
+
+5xxx - Server side error
+	500 - Internal server error
+	502 - Bad gateway
+	503 - Service unavailable
+	504 - Gateway timeout
+
+Types of DNS Records  (8:10AM)
+---------------------
+	NS 		- NameServers, Who is managing the domain
+	SOA 	- Start of authority
+	A 		- IPV4
+	AAAA 	- IPV6
+	MX 		- Mail records
+	TXT 	- Verification
+	CNAME 	- Canonical name, Another domain
+
+--------------
+SQL and NOSQL
+--------------
+	SQL:	Structured Query Language: Mysql, Pgsql,..etc
+	NOSQL:	No Structured Query Language: MongoDB
+
+Backend - Database
+	1. Connection establish - open
+	2. Request and response
+	3. Connection close
+	
+Backend - cache if not exist - connect to DB - keep it inside cache
+
+TTL - Get response
+
+Queue
+-----
+http - wait for 30 sec, if server is not responding then getting error
+
+synchronus
+asynchronus
