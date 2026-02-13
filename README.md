@@ -384,6 +384,52 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ---
 
+## 🔹 Session 26 – 12-FEB-2026
+
+* Roboshop creation using ansible </br>
+      Shipping </br>
+      Payment </br>
+      Frontend </br>
+
+### Session-26 completed on 12-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4647642?)
+
+* 00:00:00 – Introduction & Recap
+
+
+
+
+* 📄 **Session Notes:** [Session 26 Detailed Notes](session-26.txt) from another script
+
+---
+
+## 🔹 Session 27 – 13-FEB-2026
+
+* Roboshop frontend  </br>
+      Ansible configuration </br>
+      Roles </br>
+      MongoDB </br>
+      Catalogue </br>
+      Redis </br>
+      User </br>
+      Cart </br>
+      MySQL </br>
+      RabbitMQ </br>
+
+
+### Session-27 completed on 13-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4649082?)
+
+* 00:00:00 – Introduction & Recap
+
+
+
+* 📄 **Session Notes:** [Session 27 Detailed Notes](session-27.txt) from another script
+
+---
+
 ## 🛠️ Tools & Technologies Covered
 
 * Linux
