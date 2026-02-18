@@ -423,12 +423,57 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 [Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4649082?)
 
 * 00:00:00 – Introduction & Recap
+* 00:19:20 - Ansible Playbooks cons and 
+* 00:22:00 - Introduced on Ansible Roles 
+* 00:30:20 - Ansible  Configuration
+* 00:31:56 - Ansible configuration preferences
 
 
 
 * 📄 **Session Notes:** [Session 27 Detailed Notes](session-27.txt) from another script
 
 ---
+
+## 🔹 Session 28 – 17-FEB-2026
+
+* Roboshop roles completed
+
+
+### Session-28 completed on 17-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4660629?)
+
+* 00:00:00 – Introduction & Recap
+
+
+* 📄 **Session Notes:** [Session 28 Detailed Notes](session-28.txt) from another script
+
+---
+
+## 🔹 Session 29 – 18-FEB-2026
+
+* Include vs import role
+* Dynamic inventory
+* Vault
+* SSM parameter store
+* Secrets manager
+* Parallel execution
+* Ansible disadvantages
+
+
+
+### Session-29 completed on 18-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4662516?)
+
+* 00:00:00 – Introduction & Recap
+
+
+
+* 📄 **Session Notes:** [Session 29 Detailed Notes](session-29.txt) from another script
+
+---
+
 
 ## 🛠️ Tools & Technologies Covered
 
