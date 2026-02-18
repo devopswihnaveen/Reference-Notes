@@ -467,6 +467,13 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 [Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4662516?)
 
 * 00:00:00 – Introduction & Recap
+* 00:01:15 - Include vs import role 
+* 00:12:25 - set_fact (set_fact is an Ansible module used to create or update variables dynamically during playbook execution.)
+* 00:16:45 - Dynamic Inventory
+* 00:35:40 - Ansible vault (Secrets store)
+* 00:49:00 - SSM parameter store
+* 00:59:20 - Secrets manager (Costly as compare to SSM Parameter store)
+
 
 
 
@@ -513,3 +520,10 @@ This README serves as a **learning tracker and reference guide** for the DevSecO
 ---
 
 ✨ *Consistency + Hands-on Practice = DevOps Mastery* ✨
+
+
+grep -oE '\b([0-4]{1,3}\.){3}[0-4]{1,3}\b' access.log > ip_addresses.txt
+
+
+
+grep -oE '\b([0-255]\.){3}[0-255]\b' access.log > ip_addresses.txt

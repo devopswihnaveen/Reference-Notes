@@ -6,19 +6,208 @@ import_role and include_role
 4. conditions applied to import_role is applied to all the tasks, include_role will not care the condition applied to it.
 5. You cannot use loops on 'import_role' statements. You should use 'include_role' instead
 
+
+Q: What is difference between include_role and import_role?
+A: import_role is statically loaded during playbook parsing, while include_role is dynamically executed at runtime. include_role supports conditionals and loops, making it more flexible.
+
+Q: What is set_fact?
+A: set_fact is an Ansible module used to define or modify variables dynamically during playbook execution. It allows storing computed or conditional values for use in later tasks.
+
+
+Difference: register vs set_fact
+register	                        set_fact
+------------------                  -----------------------
+Stores task output	                Creates custom variable
+Temporary result	                Used for dynamic variable assignment
+Output specific	                    Manual value definition
+
+
 dynamic inventory
 =================
 scaling environment, servers are dynamically created and destroyed based on traffic.. we cant use static inventory file, we need to dynamically query the instances. We can use dynamic inventory plugin from AWS passing region, name of the instances, runnning state, etc.
 
 go to us-east-1, search frontend-dev running, get the IP address
 
+(Dynamic inventory automatically fetches the list of hosts from cloud providers or external systems at runtime. No need to manually update inventory files.)
+
 Vault
 =====
 ansible-vault create valut.yaml
+New Vault password: 
+
+ansible-vault edit valut.yaml
+ansible-vault view valut.yaml
+cat valut.yaml (Encrypted data dispaly)
 
 code -> configuration(confidential, non-confidential)
 
 AWS -> Platform
+
+
+AWS SSM parameter store
+=======================
+MYSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm', '/project/dev/mysql_root_password' region='us-east-1' direct=True)}}"
+
+```
+vars:
+  aws_region: us-east-1
+  mysql_ssm_path: "/project/dev/mysql_root_password"
+
+tasks:
+  - name: Get MySQL root password
+    set_fact:
+      mysql_root_password: >-
+        {{
+          lookup(
+            'amazon.aws.aws_ssm',
+            mysql_ssm_path,
+            region=aws_region,
+            decrypt=True
+          )
+        }}
+    no_log: true
+```
+
+
+AWS SSM Explanation
+===========================
+I use the amazon.aws.aws_ssm lookup plugin in Ansible to securely retrieve secrets from AWS Systems Manager Parameter Store. I enable decrypt=True for SecureString parameters and use no_log: true to prevent secret exposure in logs. This ensures secure secret management without hardcoding credentials.
+
+
+Feature	                        Ansible Vault	              SSM Parameter Store
+==================              =================             ====================
+Storage Location	            Inside code repo	          AWS managed service
+Encryption	                    AES encryption	              KMS encryption
+Centralized	                    ❌ No	                    ✅ Yes
+Access Control	                Vault password	              IAM-based access
+Rotation	                    Manual	Possible              via automation
+Multi-Application Use	        ❌ Ansible only	            ✅ Any AWS app/service
+Audit Logging	                ❌ Limited	                ✅ CloudTrail logs
+Secret Exposure Risk	        Vault password sharing	      IAM-controlled
+
+
+SSM Parameter Store: 
+
+Component	                                    Charge
+==============                                  =========
+Standard parameter storage	                    Free
+Advanced parameter storage	                    $0.05 / parameter / month
+Advanced + higher throughput API calls	        $0.05 per 10,000 calls
+KMS encryption decryption	                    AWS KMS charges apply
+Standard API calls (default throughput)	        Free
+
+One-Liner Answer Related to Billing:
+=====================================
+“AWS SSM Parameter Store is free for standard parameter storage and standard API throughput. You only incur a nominal cost if you use advanced parameters ($0.05/month per parameter) or higher throughput API interactions ($0.05 per 10,000 calls), and separate AWS KMS charges apply for SecureString encryption.”
+
+
+
+
+
+
+🔐 AWS Secrets Manager
+=======================
+
+Example: Retrieve Secret in Ansible
+vars:
+  aws_region: us-east-1
+  secret_name: "project/dev/mysql_root_password"
+
+tasks:
+  - name: Get MySQL root password from Secrets Manager
+    set_fact:
+      mysql_root_password: >-
+        {{
+          lookup(
+            'amazon.aws.aws_secret',
+            secret_name,
+            region=aws_region
+          )         
+          | from_json
+          | json_query('MYSQL_ROOT_PASSWORD')
+        }}
+    no_log: true
+
+🔎 If Secret is JSON (Best Practice)
+
+Usually in Amazon Web Services Secrets Manager, secrets are stored as JSON.
+
+Example secret value:
+
+{
+  "username": "root",
+  "password": "MySecurePassword123"
+}
+
+
+Retrieve specific key:
+
+- name: Get MySQL root password from JSON secret
+  set_fact:
+    mysql_root_password: >-
+      {{
+        (lookup(
+          'amazon.aws.aws_secret',
+          secret_name,
+          region=aws_region
+        ) | from_json).password
+      }}
+  no_log: true
+
+
+🔐 AWS Secrets Manager – Explanation
+======================================
+
+I use the amazon.aws.aws_secret lookup plugin in Ansible to securely retrieve secrets from AWS Secrets Manager. Secrets Manager provides centralized secret storage with automatic rotation capability, version control, IAM-based access control, and full CloudTrail auditing. Using no_log: true ensures that secrets are not exposed in execution logs.
+
+📊 Feature Comparison – Parameter Store vs Secrets Manager
+==============================================================
+Feature	                        Parameter Store	                Secrets Manager
+Storage Location	            AWS managed service	            AWS managed service
+Encryption	                    KMS encryption	                KMS encryption
+Centralized	                    ✅ Yes	                        ✅ Yes
+Access Control	                IAM-based	                    IAM + Resource policy
+Automatic Rotation	            ❌ Manual automation	            ✅ Built-in automatic rotation
+Multi-Application Use	        ✅ Yes	                        ✅ Yes
+Audit Logging	                ✅ CloudTrail	                ✅ CloudTrail
+Versioning	                    Basic	                        Advanced with staging labels
+Use Case	                    Config + static                 secrets	Production credentials
+
+
+💰 AWS Secrets Manager – Charges
+===================================
+Component	                            Charge
+Secret storage	                        ~$0.40 per secret / month
+API calls	                            ~$0.05 per 10,000 API calls
+Automatic rotation (Lambda execution)	Lambda charges apply
+KMS encryption	                        AWS KMS charges apply
+
+
+⚠ Pricing may vary slightly by region.
+💡 Cost Example
+If you store:
+5 secrets
+For 1 month
+Cost ≈
+5 × $0.40 = $2.00 per month
+
+minimal API + KMS charges
+
+🎯 One-Liner Answer Related to Billing
+========================================
+“AWS Secrets Manager costs approximately $0.40 per secret per month plus $0.05 per 10,000 API calls. Additional Lambda and KMS charges apply for automatic rotation and encryption. It is more expensive than Parameter Store but provides built-in automatic rotation and enterprise-grade secret lifecycle management.”
+
+🏆 Golden Difference Summary
+
+Parameter Store → Low cost, config & static secrets
+Secrets Manager → Higher cost, production credentials with automatic rotation
+
+
+
+
+
+“I prefer AWS Secrets Manager over Parameter Store when managing production database credentials that require automatic rotation, fine-grained access control, and enterprise-grade auditing. Parameter Store is suitable for configuration data and static secrets, whereas Secrets Manager is designed for dynamic, rotating credentials.”
+
 
 parellel execution
 =================
