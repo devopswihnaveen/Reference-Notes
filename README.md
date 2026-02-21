@@ -500,28 +500,6 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ## 🔹 Session 31 – 20-FEB-2026
 
-* Ansible using keys
-
-### Terraform
-* Terraform advantages
-* Installation and setup
-* Ec2 and SG creation
-
-
-### Session-31 completed on 20-FEB-2026 (Recording Session Timestamps):
-
-[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4665367?)
-
-* 00:00:00 – Introduction & Recap
-
-
-* 📄 **Session Notes:** [Session 30 Detailed Notes](session-31.txt) from another script
-
----
-
-
-## 🔹 Session 31 – 20-FEB-2026
-
 * Git ignore
 * Variables
 * Precedence of variables
