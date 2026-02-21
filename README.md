@@ -568,8 +568,7 @@ This README serves as a **learning tracker and reference guide** for the DevSecO
 ✨ *Consistency + Hands-on Practice = DevOps Mastery* ✨
 
 
+
+## Command for collect IPV4 ip's from 5 GB .log file (My Interview Question)
+
 grep -oE '\b([0-4]{1,3}\.){3}[0-4]{1,3}\b' access.log > ip_addresses.txt
-
-
-
-grep -oE '\b([0-255]\.){3}[0-255]\b' access.log > ip_addresses.txt
