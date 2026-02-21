@@ -571,4 +571,17 @@ This README serves as a **learning tracker and reference guide** for the DevSecO
 
 ## Command for collect IPV4 ip's from 5 GB .log file (My Interview Question)
 
-grep -oE '\b([0-4]{1,3}\.){3}[0-4]{1,3}\b' access.log > ip_addresses.txt
+Strict Valid IPv4 Regex:
+If you want only valid 0–255 values:
+```
+grep -oP '\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b' access.log > ip_addresses.txt   
+```
+Unique IPs Only
+```
+grep -oE '\b(([0-9]{1,3}\.){3}[0-9]{1,3})\b' access.log | sort -u > ip_addresses.txt
+```
+This matches numbers like:
+999.999.999.999
+```
+grep -oE '\b(([0-9]{1,3}\.){3}[0-9]{1,3})\b' access.log > ip_addresses.txt
+```
