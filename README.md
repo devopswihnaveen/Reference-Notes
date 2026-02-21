@@ -461,7 +461,6 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 * Ansible disadvantages
 
 
-
 ### Session-29 completed on 18-FEB-2026 (Recording Session Timestamps):
 
 [Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4662516?)
@@ -474,10 +473,79 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 * 00:49:00 - SSM parameter store
 * 00:59:20 - Secrets manager (Costly as compare to SSM Parameter store)
 
-
-
-
 * 📄 **Session Notes:** [Session 29 Detailed Notes](session-29.txt) from another script
+
+---
+
+## 🔹 Session 30 – 19-FEB-2026
+
+* Ansible using keys
+
+### Terraform
+* Terraform advantages
+* Installation and setup
+* Ec2 and SG creation
+
+
+### Session-30 completed on 19-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4665367?)
+
+* 00:00:00 – Introduction & Recap
+
+
+* 📄 **Session Notes:** [Session 30 Detailed Notes](session-30.txt) from another script
+
+---
+
+## 🔹 Session 31 – 20-FEB-2026
+
+* Ansible using keys
+
+### Terraform
+* Terraform advantages
+* Installation and setup
+* Ec2 and SG creation
+
+
+### Session-31 completed on 20-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/724449/lesson/4665367?)
+
+* 00:00:00 – Introduction & Recap
+
+
+* 📄 **Session Notes:** [Session 30 Detailed Notes](session-31.txt) from another script
+
+---
+
+
+## 🔹 Session 31 – 20-FEB-2026
+
+* Git ignore
+* Variables
+* Precedence of variables
+* Conditions
+* Count based loop
+
+
+### Session-31 completed on 20-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4668457?)
+
+* 00:00:00 – Introduction & Recap
+* 00:03:50 - Git ignore
+* 00:07:35 - Variables (variable.tf)
+* 00:24:50 - Conditions (condition ? true_val : false_val) #with respect to Environment
+* 00:31:20 - Precedence of variables (cmd, terraform.tfvars, export TF_VARS= , ..etc)
+* 00:42:30 - Count based loop
+* 00:48:30 -      count.index
+* 00:53:20 -      output.tf
+* 01:03:30 -      interpolation (Domain name includes .)
+* 01:09:25 -      Orderwise execution explanation with respeect to dependencies
+* 01:10:50 -      For_Each Loop (list and set differences)
+
+* 📄 **Session Notes:** [Session 31 Detailed Notes](session-31.txt) from another script
 
 ---
 
