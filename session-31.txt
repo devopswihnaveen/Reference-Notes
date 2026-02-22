@@ -52,6 +52,252 @@ output "name_of_the_output" {
 }
 
 
+
+
+Quick Comparison Table : 
+-----------------------
+Feature	            count	            for_each
+-------             ------              ----------
+Uses	            Number	            Map / Set
+Access	            Index	            Key
+Order sensitive	    Yes	                No
+Duplicate issue	    No	                Set removes duplicates
+Best for	        Same resources	    Different configs
+
+--------------------------
+Interview One-Line Summary
+--------------------------
+count → “Used for creating identical resources using index.”
+
+for_each → “Used for creating resources using map/set with unique keys.”
+
+list → “Ordered collection, allows duplicates.”
+
+map → “Key-value structured data.”
+
+toset → “Converts list to set and removes duplicates.”
+
+
+
+
+
+
+
+
+
+
+
+
+
+Core Terraform Concepts
+========================
+Terraform:
+Infrastructure as Code (IaC) tool used to provision and manage infrastructure using configuration files.
+
+Infrastructure as Code (IaC):
+Managing infrastructure using code instead of manual configuration.
+
+Provider:
+Plugin that allows Terraform to interact with APIs (AWS, Azure, GCP, etc.).
+
+Resource:
+A block that defines an infrastructure object (EC2, S3, VPC, etc.).
+
+Data Source:
+Used to fetch existing infrastructure information.
+
+Variable:
+Input value used to parameterize Terraform configurations.
+
+Output:
+Displays values after Terraform apply (like instance ID, IP).
+
+Local:
+Temporary value used inside configuration to simplify expressions.
+
+📁 Terraform Files
+=======================
+.tf file:
+Main configuration file written in HCL.
+
+terraform.tfvars:
+File to define variable values.
+
+.terraform.lock.hcl:
+Dependency lock file for provider versions.
+
+terraform.tfstate:
+Stores current state of infrastructure.
+
+terraform.tfstate.backup:
+Backup of previous state.
+
+⚙️ Terraform Commands
+=======================
+terraform init:
+Initializes working directory and downloads providers.
+
+terraform plan:
+Shows execution plan before applying changes.
+
+terraform apply:
+Creates or modifies infrastructure.
+
+terraform destroy:
+Deletes managed infrastructure.
+
+terraform validate:
+Checks configuration syntax validity.
+
+terraform fmt:
+Formats Terraform code.
+
+terraform show:
+Displays state or plan details.
+
+terraform output:
+Displays output values.
+
+terraform refresh (legacy):
+Updates state file with real infrastructure info.
+
+🔄 State & Backend
+===================
+State File:
+Tracks real infrastructure mapped to configuration.
+
+Remote Backend:
+Stores state remotely (S3, Azure Storage, etc.).
+
+Backend:
+Configuration for where state is stored.
+
+State Locking:
+Prevents multiple users from modifying state simultaneously.
+
+Workspaces:
+Used to manage multiple environments (dev, prod).
+
+🔁 Meta-Arguments
+===================
+count:
+Creates multiple identical resources using index.
+
+for_each:
+Creates multiple resources using map or set with unique keys.
+
+depends_on:
+Defines explicit resource dependency.
+
+lifecycle:
+Controls resource behavior (create_before_destroy, prevent_destroy).
+
+provider (meta):
+Specifies which provider configuration to use.
+
+📊 Data Types
+==================
+string:
+Text value.
+
+number:
+Numeric value.
+
+bool:
+True/False value.
+
+list:
+Ordered collection (allows duplicates).
+
+map:
+Key-value collection.
+
+set:
+Unordered unique collection.
+
+object:
+Complex structured data type.
+
+tuple:
+Fixed-length list with specific types.
+
+🔄 Functions
+================
+toset():
+Converts list to set (removes duplicates).
+
+tolist():
+Converts set to list.
+
+tomap():
+Converts value to map.
+
+length():
+Returns number of elements.
+
+lookup():
+Fetches value from map safely.
+
+element():
+Retrieves item from list by index.
+
+concat():
+Merges lists.
+
+merge():
+Merges maps.
+
+🏗️ Modules
+=============
+Module:
+Reusable Terraform configuration block.
+
+Root Module:
+Main working directory configuration.
+
+Child Module:
+Module called inside root module.
+
+🔐 Provisioners
+================
+Provisioner:
+Executes scripts on local or remote machines.
+
+local-exec:
+Runs command locally.
+
+remote-exec:
+Runs command on remote resource.
+
+🌐 Advanced Concepts
+-----------------------
+HCL (HashiCorp Configuration Language):
+Language used to write Terraform configurations.
+
+Interpolation:
+Embedding variables or expressions inside strings.
+
+Dynamic Block:
+Used to generate repeated nested blocks.
+
+Import:
+Brings existing infrastructure under Terraform control.
+
+Taint (legacy):
+Marks resource for recreation.
+
+Ultimate One-Line Interview Summary:
+====================================
+“Terraform is an Infrastructure as Code tool that uses HCL to provision, manage, and version cloud resources using state management, modules, providers, and reusable configurations.”
+
+
+
+
+
+
+
+
+
 -----------------------------------
 terraform init
 terraform plan -out=tfplan

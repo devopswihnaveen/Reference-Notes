@@ -9,7 +9,6 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 ## 📌 Program Overview
 
 * **Program Name:** DevSecOps with AWS
-* **Total Sessions:** 88
 * **Format:** Live + Demo Sessions
 * **Focus Areas:** DevOps, Security, AWS, Automation, Real-world projects
 * **Projects:** Expense App, RoboShop (Microservices-based)
@@ -566,7 +565,6 @@ This README serves as a **learning tracker and reference guide** for the DevSecO
 ---
 
 ✨ *Consistency + Hands-on Practice = DevOps Mastery* ✨
-
 
 
 ## Command for collect IPV4 ip's from 5 GB .log file (My Interview Question)
