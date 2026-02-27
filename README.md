@@ -526,13 +526,85 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ---
 
+## 🔹 Session 32 – 23-FEB-2026
+
+* For each loop
+* Dynamic loop
+* Data sources
+* Terraform functions
+
+
+### Session-32 completed on 23-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4671232?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 32 Detailed Notes](session-32.txt) from another script
+
+---
+
+## 🔹 Session 33 – 24-FEB-2026
+
+* State and remote state
+* Locals
+* Provisioners
+* Local-exec
+* Remote-exec
+
+
+### Session-33 completed on 24-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4677459?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 33 Detailed Notes](session-33.txt) from another script
+
+---
+
+## 🔹 Session 34 – 25-FEB-2026
+
+* Multi environments using
+* Workspaces
+* Tfvars 
+* Module development
+* EC2 module development
+
+
+### Session-34 completed on 25-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4679917?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 34 Detailed Notes](session-34.txt) from another script
+
+---
+
+## 🔹 Session 35 – 26-FEB-2026
+
+* Terraform Naming convention
+* Documentation
+
+
+### Session-35 completed on 26-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4681069?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 35 Detailed Notes](session-35.txt) from another script
+
+---
+
 
 ## 🛠️ Tools & Technologies Covered
 
 * Linux
 * Git & GitHub
 * Shell Scripting
-* AWS (EC2, Route53, IAM)
+* Terraform, AWS (EC2, VPC, S3, Route53, IAM)
 * DNS
 * Databases (MySQL, MongoDB, Redis)
 * Messaging (RabbitMQ)
