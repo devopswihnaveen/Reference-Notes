@@ -586,6 +586,12 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 * Terraform Naming convention
 * Documentation
+* VPC Concept
+      - Subnets
+      - Internet gateway
+      - Routes
+      - IP address
+
 
 
 ### Session-35 completed on 26-FEB-2026 (Recording Session Timestamps):
@@ -595,6 +601,41 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 * 00:00:00 – Introduction & Recap
 
 * 📄 **Session Notes:** [Session 35 Detailed Notes](session-35.txt) from another script
+
+---
+
+## 🔹 Session 36 – 27-FEB-2026
+
+* VPC manual creation
+* VPC module through terraform
+      VPC
+      IGW
+      Public Subnets
+
+
+### Session-36 completed on 27-FEB-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4685223?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 36 Detailed Notes](session-36.txt) from another script
+
+---
+
+## 🔹 Session 37 – 02-MARCH-2026
+
+* VPC Module completed
+* VPC Peering
+
+
+### Session-37 completed on 02-MARCH-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4686792?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 37 Detailed Notes](session-37.txt) from another script
 
 ---
 
