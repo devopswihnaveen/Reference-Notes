@@ -639,6 +639,41 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ---
 
+## 🔹 Session 38 – 03-MARCH-2026
+
+* Bastion Host
+* Security Groups
+* VPC peering test
+* RoboShop infra in DEV
+* SG module
+* SSM parameter store
+
+
+### Session-38 completed on 03-MARCH-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4695519?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 38 Detailed Notes](session-38.txt) from another script
+
+---
+
+## 🔹 Session 39 – 04-MARCH-2026
+
+* IAM
+
+
+### Session-39 completed on 04-MARCH-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4701242?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 39 Detailed Notes](session-39.txt) from another script
+
+---
+
 
 ## 🛠️ Tools & Technologies Covered
 
