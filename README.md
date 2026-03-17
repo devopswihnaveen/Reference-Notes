@@ -634,6 +634,9 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 [Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4686792?)
 
 * 00:00:00 – Introduction & Recap
+* 00:06:00 - AWS VPC Route table
+* 00:09:26 - Routes
+
 
 * 📄 **Session Notes:** [Session 37 Detailed Notes](session-37.txt) from another script
 
@@ -661,6 +664,8 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ## 🔹 Session 39 – 04-MARCH-2026
 
+* SG rules
+* Bastion
 * IAM
 
 
@@ -671,6 +676,134 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 * 00:00:00 – Introduction & Recap
 
 * 📄 **Session Notes:** [Session 39 Detailed Notes](session-39.txt) from another script
+
+---
+
+## 🔹 Session 40 – 05-MARCH-2026
+
+* Bastion to database using provisioner
+* Terraform ansible integration
+* Bastion user data
+
+
+### Session-40 completed on 05-MARCH-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4703709?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 40 Detailed Notes](session-40.txt) from another script
+
+---
+
+## 🔹 Session 41 – 06-MAR-2026
+
+* IAM role form MySQL
+* Roboshop databases
+* Load Balancer
+
+
+### Session-41 completed on 06-MAR-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4706785?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 41 Detailed Notes](session-41.txt) from another script
+
+---
+
+## 🔹 Session 42 – 09-MAR-2026
+
+* Load balancer manual approach
+      Load Balancer
+      Listener
+      Rule
+      Health Check
+      Catalogue instance and configuration
+      Route53 record
+* Load balancer using terraform
+      Load Balancer
+      Listener
+      Route53 record
+
+
+### Session-42 completed on 09-MAR-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4716815?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 42 Detailed Notes](session-42.txt) from another script
+
+---
+
+## 🔹 Session 43 – 10-MAR-2026
+
+* Load balancer terraform approach
+      Load Balancer
+      Listener
+      Rule
+      Health Check
+      Catalogue instance and configuration
+      Route53 record
+
+
+### Session-43 completed on 10-MAR-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4717715?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 43 Detailed Notes](session-43.txt) from another script
+
+---
+
+## 🔹 Session 44 – 12-MAR-2026
+
+* 44 Session Topics
+
+### Session-44 completed on 12-MAR-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4726377?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 44 Detailed Notes](session-44.txt) from another script
+
+---
+
+## 🔹 Session 45 – 16-MARCH-2026
+
+* HTTP vs HTTPS vs SSL vs TLS
+* How TLS works
+* Self signed certificate
+* CA
+* ZeroSSL CA
+* AWS ACM
+* AWS Frontend ALB
+
+### Session-45 completed on 16-MARCH-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4732995?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 45 Detailed Notes](session-45.txt) from another script
+
+---
+
+## 🔹 Session 46 – 17-MARCH-2026
+
+* 46 Session Topics
+
+### Session-40 completed on 05-MARCH-2026 (Recording Session Timestamps):
+
+[Recording Session](https://learn.joindevops.com/learn/home/DevSecOps-with-AWS-88S/section/730337/lesson/4740606?)
+
+* 00:00:00 – Introduction & Recap
+
+* 📄 **Session Notes:** [Session 46 Detailed Notes](session-46.txt) from another script
 
 ---
 
@@ -714,6 +847,9 @@ This README serves as a **learning tracker and reference guide** for the DevSecO
 
 ✨ *Consistency + Hands-on Practice = DevOps Mastery* ✨
 
+
+
+# Additional Technical question from my interview
 
 ## Command for collect IPV4 ip's from 5 GB .log file (My Interview Question)
 
