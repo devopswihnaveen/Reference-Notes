@@ -740,7 +740,7 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ## 🔹 Session 43 – 10-MAR-2026
 
-* Load balancer terraform approach
+- **Load balancer terraform approach**
       - Load Balancer
       - Listener
       - Rule
