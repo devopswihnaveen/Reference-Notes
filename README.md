@@ -715,17 +715,17 @@ This repository documents the **DevSecOps with AWS (88 Sessions)** training prog
 
 ## 🔹 Session 42 – 09-MAR-2026
 
-* Load balancer manual approach
-      Load Balancer
-      Listener
-      Rule
-      Health Check
-      Catalogue instance and configuration
-      Route53 record
-* Load balancer using terraform
-      Load Balancer
-      Listener
-      Route53 record
+- **Load balancer manual approach**
+- Load Balancer
+- Listener
+- Rule
+- Health Check
+- Catalogue instance and configuration
+- Route53 record
+- **Load balancer using terraform**
+- Load Balancer
+- Listener
+- Route53 record
 
 
 ### Session-42 completed on 09-MAR-2026 (Recording Session Timestamps):
